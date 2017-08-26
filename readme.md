@@ -4,7 +4,7 @@
         
 ### Configure
 
-Add to line to `config/app.php` 
+Add line to `config/app.php` 
 
         'providers' => [
                 ...
