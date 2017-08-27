@@ -15,7 +15,7 @@ class ShorterServiceProvider extends ServiceProvider
     {
         $this->publishes([
             __DIR__.'/../../config/shorter.php' => config_path('shorter.php'),
-            __DIR__.'../../resources/views' => resource_path('views/vendor/shorter')
+            __DIR__.'/../../resources/views' => resource_path('views/vendor/shorter')
         ]);
 
         $this->publishes([
