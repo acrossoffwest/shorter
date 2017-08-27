@@ -26,7 +26,7 @@
                     } else {
                         error = 'Undefined error';
                     }
-                    $shortUrl.val(error);
+                    swal(error, "", "error");
                     return;
                 }
                 $shortUrl.val(response.data.redirect_url);
