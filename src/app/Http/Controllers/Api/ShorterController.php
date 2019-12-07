@@ -3,15 +3,16 @@
 namespace Acrossoffwest\Shorter\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use Acrossoffwest\Shorter\Helpers\Url;
 use Acrossoffwest\Shorter\Models\Shorter;
 
 class ShorterController extends Controller
 {
-    public function generate()
+    public function generate(Request $request)
     {
-        $url = Input::get('url');
+        $url = $request->get('url');
 
         if (empty($url)) {
             return $this->getResult(false, null, ['Url not be empty']);
